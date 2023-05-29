@@ -95,7 +95,13 @@
     top: 150px;
     animation: cloud 20s linear infinite;
 }
-
+.bird{
+    width: 100px;
+    position: absolute;
+    top: 50px;
+    left: -150px;
+    animation: bird 15s linear infinite;
+}
 .line {
     width: 100%;
     border: 5px dashed white;
@@ -108,6 +114,14 @@
     }
     to {
         right: 1600px;
+    }
+}
+@keyframes bird {
+    from {
+        left: -150px;
+    }
+    to {
+        left: 1600px;
     }
 }
 
