@@ -16,6 +16,10 @@
     height: 40vh;
     background-color: rgba(44, 62, 80, 1.0);
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
 }
 
 .road-bottom {
@@ -26,13 +30,17 @@
 
 /*===========================*/
 .car-wrapper {
+    width: 100%;
+    position: absolute;
+    /* transform: rotateY(180deg);*/
+    top: 0;
+}
+.car-wrap{
+    animation: leftToRight 10s infinite linear;
+    transform-origin: center;
     width: 200px;
     border: 1px solid red;
     height: 100px;
-    position: relative;
-     animation: leftToRight 10s infinite linear;
-    transform-origin: center;
-    /* transform: rotateY(180deg);*/
 }
 
 .car {
@@ -73,13 +81,14 @@
     z-index: 1;
 }
 
-.cloud-1{
+.cloud-1 {
     width: 150px;
     position: absolute;
     right: -150px;
     animation: cloud 10s linear infinite;
 }
-.cloud-2{
+
+.cloud-2 {
     width: 150px;
     position: absolute;
     right: -150px;
@@ -87,15 +96,21 @@
     animation: cloud 20s linear infinite;
 }
 
+.line {
+    width: 100%;
+    border: 5px dashed white;
+}
+
 /*===========================*/
 @keyframes cloud {
-    from{
+    from {
         right: -150px;
     }
-    to{
+    to {
         right: 1600px;
     }
 }
+
 @keyframes forwardWheel {
     from {
         transform: rotate(0);
