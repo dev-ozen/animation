@@ -28,7 +28,8 @@
     border: 1px solid red;
     height: 100px;
     position: relative;
-    animation: leftToRight 10s infinite linear;
+   /* animation: leftToRight 10s infinite linear;*/
+    transform-origin: center;
 }
 
 .car {
@@ -63,11 +64,14 @@
 @keyframes leftToRight {
     0%{
         left: calc(100% - 100px);
-        transform: scaleX(-1);
+        transform: scaleX(1);
     }
     50%{
         left: 0;
         transform: scaleX(1);
+    }
+    50%{
+        transform: scaleX(-1);
     }
     100%{
         left: calc(100% - 100px);
