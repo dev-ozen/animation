@@ -1,18 +1,59 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
-.top-outer{
+
+.top-outer {
     width: 100%;
     height: 50vh;
-    background-color: rgba(52, 152, 219,0.2);
+    background-color: rgba(52, 152, 219, 0.2);
 }
-.road-top{
+
+.road-top {
     width: 100%;
     height: 40vh;
-    background-color: rgba(44, 62, 80,1.0);
-}.road-bottom{
+    background-color: rgba(44, 62, 80, 1.0);
+}
+
+.road-bottom {
     width: 100%;
     height: 10vh;
-    background-color: rgba(255, 159, 67,0.5);
+    background-color: rgba(255, 159, 67, 0.5);
 }
+
+/*===========================*/
+.car-wrapper {
+    width: 200px;
+    border: 1px solid red;
+    height: 100px;
+    position: relative;
+}
+
+.car {
+    width: 100%;
+}
+.wheel{
+    width: 35px;
+    position: absolute;
+    bottom: 7px;
+    animation-name: forwardWheel;
+    animation-duration: 0.4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+.wheel-1{
+    left: 25px;
+}
+.wheel-2{
+    right: 32px;
+}
+/*===========================*/
+@keyframes forwardWheel {
+    from{
+        transform: rotate(0);
+    }
+    to{
+        transform: rotate(-360deg);
+    }
+}
+/*===========================*/
