@@ -27,6 +27,7 @@
     border: 1px solid red;
     height: 100px;
     position: relative;
+    animation: leftToRight 10s infinite;
 }
 
 .car {
@@ -34,10 +35,11 @@
 }
 .wheel{
     width: 35px;
+    height: 35px;
     position: absolute;
     bottom: 7px;
     animation-name: forwardWheel;
-    animation-duration: 0.4s;
+    animation-duration: 0.3s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 }
@@ -56,4 +58,17 @@
         transform: rotate(-360deg);
     }
 }
+
+@keyframes leftToRight {
+    0%{
+        left: 0;
+    }
+    50%{
+        left: calc(100% - 100px);
+    }
+    100%{
+        left: 0;
+    }
+}
+
 /*===========================*/
