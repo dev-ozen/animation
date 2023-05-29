@@ -130,7 +130,6 @@
 
 @keyframes leftToRight {
     0% {
-        /*left: calc(100% - 100px);*/
         right: -200px;
         transform: rotateY(0);
     }
@@ -138,7 +137,6 @@
         right: 1600px;
     }
     100% {
-        /*left: calc(100% - 100px);*/
         right: -200px;
         transform: rotateY(180deg);
     }
